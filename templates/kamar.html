@@ -1,0 +1,35 @@
+<h2>Data Kamar</h2>
+
+<a href="/tambah_kamar">Tambah Kamar</a>
+
+<table border="1">
+
+<tr>
+<th>Nomor</th>
+<th>Harga</th>
+<th>Status</th>
+<th>Aksi</th>
+</tr>
+
+{% for k in kamar %}
+
+<tr>
+<td>{{k.nomor}}</td>
+<td>{{k.harga}}</td>
+<td>{{k.status}}</td>
+
+<td>
+
+<a href="/edit_kamar/{{k.id}}">Edit</a>
+
+<a href="/delete_kamar/{{k.id}}">Delete</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<a href="/">Kembali</a>
